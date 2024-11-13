@@ -13,7 +13,7 @@
         dbt: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp NUMBER_7 &kp D &kp B &kp T &kp SPACE &kp R &kp U &kp N &kp SPACE &kp MINUS &kp S &kp SPACE>;
+            bindings = <&kp D &kp B &kp T &kp SPACE &kp R &kp U &kp N &kp SPACE &kp MINUS &kp S &kp SPACE>;
             label = "NEW_MACRO";
         };
     };
