@@ -10,13 +10,10 @@
 
 / {
     macros {
-        new_macro: new_macro {
+        dbt: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none &kp NUMBER_7 &kp D &kp B &kp T &kp SPACE &kp R &kp U &kp N &kp SPACE &kp MINUS &kp S &kp SPACE>,
-                <&macro_press>;
-
+            bindings = <&none &kp NUMBER_7 &kp D &kp B &kp T &kp SPACE &kp R &kp U &kp N &kp SPACE &kp MINUS &kp S &kp SPACE>;
             label = "NEW_MACRO";
         };
     };
@@ -25,7 +22,8 @@
         compatible = "zmk,keymap";
 
         default_layer {
-        display-name = "TeORiA";
+            display-name = "TeORiA";
+
             // ------------------------------------------------------------------------------------------------------------
             // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
             // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
@@ -46,6 +44,7 @@
 
         lower_layer {
             display-name = "lower";
+
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
             // | `     |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
@@ -67,6 +66,7 @@
 
         raise_layer {
             display-name = "raise";
+
             // ------------------------------------------------------------------------------------------------------------
             // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
             // |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |       |      |       |       |
@@ -75,7 +75,7 @@
             //              |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans  &trans                &trans                 &trans   &kp EQUAL
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans  &trans                &trans                 &dbt     &kp EQUAL
 &trans  &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans  &trans                &trans                 &kp N0   &trans
 &trans  &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp LEFT   &kp UP  &kp DOWN              &kp RIGHT              &kp DEL  &kp BSPC
 &trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans   &kp UNDERSCORE
@@ -94,6 +94,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        dev {
+            if-layers = <2>;
+            then-layer = <3>;
         };
     };
 };
