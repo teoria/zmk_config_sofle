@@ -18,6 +18,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        numpad {
+            bindings = <&mo 3>;
+            key-positions = <53 52>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -88,21 +97,14 @@
         vccode {
             display-name = "vscode";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp N8        &kp N9        &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        dev {
-            if-layers = <2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
