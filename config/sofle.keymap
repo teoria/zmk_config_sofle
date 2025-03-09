@@ -73,15 +73,17 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp A>, <&a_tilde>, <&a_circunflex>;
+
+            label = "TDA";
         };
 
         tdo: tap_dance_o {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp O>, <&o_tilde>, <&o_circunflex>;
 
-            label = "TAP_DANCE_O";
+            label = "tdo";
         };
     };
 
