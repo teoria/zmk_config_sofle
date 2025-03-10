@@ -50,7 +50,7 @@
     combos {
         compatible = "zmk,combos";
 
-        numpad {
+        mouse {
             bindings = <&mo 4>;
             key-positions = <53 52>;
         };
@@ -58,6 +58,16 @@
         enter_duplo {
             bindings = <&kp RET>;
             key-positions = <34 35>;
+        };
+
+        vscode {
+            bindings = <&mo 3>;
+            key-positions = <56 55>;
+        };
+
+        mouse2 {
+            bindings = <&mo 4>;
+            key-positions = <53 54>;
         };
     };
 
@@ -168,12 +178,14 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans        &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &mkp LCLK       &mkp RCLK     &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans        &trans          &trans           &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans        &trans          &trans
+&trans  &trans          &trans          &trans           &trans  &trans                    &trans          &trans        &trans          &trans           &trans  &trans
+&trans  &trans          &mmv MOVE_UP    &trans           &trans  &trans                    &mkp LCLK       &mkp RCLK     &trans          &trans           &trans  &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans                    &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans          &trans          &trans           &trans  &trans  &trans    &trans  &trans          &trans        &trans          &trans           &trans  &trans
+                        &trans          &trans           &trans  &trans  &trans    &trans  &trans          &trans        &trans          &trans
             >;
+
+            label = "mouse";
         };
     };
 
