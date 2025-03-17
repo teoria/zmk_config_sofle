@@ -6,8 +6,7 @@ This is a quick config key remap for Sofle Zmk.
 |:--:|
 | One of our Sofle variant: Sofle Hybrid with Low profile thumb cfx keycap + MX alpha keys Geekark BOW |
 
-|![sofle](keymap-drawer/sofle.svg)| 
-<img src="https://github.com/teoria/zmk_config_sofle/keymap-drawer/sofle.svg">
+|![sofle](keymap-drawer/sofle.svg)|  
 
 1. Use [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) to remap the keys.
 2. This is for Sofle with encoders and oled screen. 
