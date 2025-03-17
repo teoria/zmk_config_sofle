@@ -1,5 +1,10 @@
-# ZMK Config for Sofle
+# ZMK Config for Sofle - TeORiA
 This is a quick config key remap for Sofle Zmk.
+
+
+|![sofle](https://github.com/teoria/zmk_config_sofle/keymap-drawer/sofle.svg)|
+
+
 
 |![fe42dadb02df898c0cb13808e3faf62](https://github.com/superxc3/zmk_config_sofle/assets/79617315/aa22f713-3a78-4085-93cd-a2e8c42f69b3)|
 |:--:|
